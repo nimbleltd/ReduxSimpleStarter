@@ -18,7 +18,7 @@ class App extends Component {
 
 		this.state = { videos : [] };
 
-		YTSerach({key: API_KEY, term: 'surfboards'}, (videos) =>{
+		YTSerach({key: API_KEY, term: 'Arnold Renderer'}, (videos) =>{
 			//console.log(data)
 			//this.setState({videos:videos});
 			this.setState({ videos });
