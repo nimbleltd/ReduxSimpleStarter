@@ -20,7 +20,10 @@ class App extends Component {
 		};
 
 		YTSerach({key: API_KEY, term: 'Arnold Renderer'}, (videos) =>{
-			this.setState({ videos });
+			this.setState({ 
+				videos:videos,
+				selectedVideo: videos[0]
+			});
 		});
 	}
 
