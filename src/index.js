@@ -10,9 +10,6 @@ const API_KEY = 'AIzaSyDIefq7JBKIMWiggVExyEiM08BY2CnonJQ';
 
 
 
-
-
-// const App = function() {
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -23,12 +20,8 @@ class App extends Component {
 		};
 
 		YTSerach({key: API_KEY, term: 'Arnold Renderer'}, (videos) =>{
-			//console.log(data)
-			//this.setState({videos:videos});
 			this.setState({ videos });
 		});
-
-
 	}
 
 	render() {
