@@ -19,7 +19,11 @@ class App extends Component {
 			selectedVideo: null
 		};
 
-		YTSerach({key: API_KEY, term: 'Arnold Renderer'}, (videos) =>{
+		this.videoSearch('surfboards');
+	}
+
+	videoSearch(term) {
+		YTSerach({key: API_KEY, term: term}, (videos) =>{
 			this.setState({ 
 				videos:videos,
 				selectedVideo: videos[0]
@@ -30,7 +34,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<SearchBar />
+				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
 					onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
