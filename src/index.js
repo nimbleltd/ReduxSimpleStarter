@@ -1,5 +1,6 @@
 // create a new component
 // component creates HTML
+import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import YTSerach from 'youtube-api-search';
